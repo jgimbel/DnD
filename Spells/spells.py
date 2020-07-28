@@ -1,7 +1,7 @@
 import json
 import psycopg2
 
-with open('/Users/benholloway/Documents/DnDPnP/spells.json') as f:
+with open('./spells.json') as f:
     data = json.load(f)
 
 #connect to the db

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ spell.name }}</title>
+    <link rel="stylesheet" href="/static/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital@1&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Tinos&display=swap" rel="stylesheet">
+</head>
+<body>
+    <h1>{{ spell.name }}</h1>
+    <h2><em>{{ spell.level }}</em></h2>
+    <hr>
+    <p><strong>Casting Time: </strong>{{ spell.duration }}</p>
+    <p><b>Range: </b> {{ spell.range }}</p>
+    <p><b>Components:</b> {{ spell.components }}</p>
+    <p><b>Duration:</b> {{ spell.duration }}</p>
+    <hr>
+    <div class="text-block">
+        <p class = "text">{{ spell.text }}</p>
+    </div>
+    <hr>
+    <p><b>Source:</b> {{ spell.source }}</p>
+    <p><b>Page:</b> {{ spell.source_page }}</p>
+</body>
+</html>
