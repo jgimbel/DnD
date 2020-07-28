@@ -1,6 +1,6 @@
 from flask import Flask, url_for, render_template
 import psycopg2
-from psycopg2.extras import RealDictCursor
+from psycopg2.extras import RealDictCursor, DictCursor
 
 app = Flask(__name__)
 
@@ -13,7 +13,7 @@ con = psycopg2.connect(
 def spells():
 
     #cursor
-    with con.cursor(cursor_factory=RealDictCursor) as cur:
+    with con.cursor(cursor_factory=DictCursor) as cur:
         cur.execute('select id, name from spells;')
         spells = [x for x in cur]
         print(spells)
@@ -22,8 +22,8 @@ def spells():
 @app.route('/<spell_id>')
 def spell(spell_id):
     #cursor
-    with con.cursor(cursor_factory=RealDictCursor) as cur:
-        cur.execute('select * from spells where id = %s;', (spell_id, ))
+    with con.cursor(cursor_factory=DictCursor) as cur:
+        cur.execute('select * from spells where id = %s::int;', (spell_id, ))
         response = [x for x in cur]
         if(len(response) < 1):
             return 'No spell found'
