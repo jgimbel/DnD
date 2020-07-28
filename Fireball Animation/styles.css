@@ -1,0 +1,33 @@
+#PC{
+    background-color: green;
+    height: 2em;
+    width: 2em;
+    position: absolute;
+    left: 25%;
+    top: 25%;
+    border-radius: 50%;
+    margin: 0;
+}
+#Fireball{
+    background-color: red;
+    height: 2em;
+    width: 2em;
+    position: absolute;
+    left: 75%;
+    top: 25%;
+    border-radius: 50%;
+    animation-name: explode;
+    animation-duration: 6s;
+    animation-fill-mode: forwards;
+    margin: 0;
+    opacity: .1;
+}
+@keyframes explode{
+     2%{
+         transform: scale(6);
+     }
+     100%{
+         transform: scale(6);
+         background-color: grey;
+     }
+}

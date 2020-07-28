@@ -1,0 +1,49 @@
+@font-face {
+    font-family: 'MrsEaves';
+    src: url('MrsEavesSmallCaps_Regular.ttf') format('truetype'); /* Chrome 4+, Firefox 3.5, Opera 10+, Safari 3—5 */
+  }  
+body{
+    background: #F2ECE4;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+}
+h1{
+    color: #58180D;
+    font-family: 'MrsEaves';
+    font-size: 24pt;
+    padding-top: 2%;
+    margin: 0;
+}
+h2{
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 14px;
+    margin: 0;
+    padding-bottom: 0;
+}
+hr{
+    width: 50%;
+    margin-right: auto;
+    margin-left: auto;
+    height: 1px;
+    background-color: #58180D;
+    border-radius: 50%;
+}
+p{
+    font-family: 'Tinos', serif;
+    font-size: 12pt;
+    padding: 0;
+    margin: 0;
+}
+h3{
+    padding: 0;
+    margin: 0;
+}
+.text{
+    margin: 20px;
+}
+.text-block{
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+}
